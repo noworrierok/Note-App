@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDarkBlue700"
+    tools:context=".ui.AddNotesActivity">
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_Title_Notes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/back_edit_text"
+        android:hint="@string/title"
+        android:padding="12dp"
+        android:textColor="@color/colorCyan"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_Detail_Notes"
+        android:layout_width="match_parent"
+        android:gravity="start"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/back_edit_text"
+        android:hint="@string/detail"
+        android:padding="12dp"
+        android:textColor="@color/colorCyan"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_Date"
+        app:layout_constraintTop_toBottomOf="@+id/edit_Title_Notes"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <TextView
+        android:id="@+id/txt_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linearLayout"
+        tools:text="2050/3/12 | 12:30" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UselessLeaf">
+
+        <Button
+            android:id="@+id/btn_Cancel"
+            style="@style/Widget.AppCompat.ButtonBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="0.5"
+            android:text="@string/cancel"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <Button
+            android:id="@+id/btn_Save"
+            style="@style/Widget.AppCompat.ButtonBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="0.5"
+            android:text="@string/save"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
